@@ -5,7 +5,7 @@ Dynamic scheduling for multi-objective flexible job shop via deep reinforcement 
 conda create -n dmofjssp-env python=3.7.0 
 conda install pytorch==1.6.0 torchvision==0.7.0 cudatoolkit=10.2 -c pytorch
 
-### train
+### Train
 
 ```
 # The policy model trained under the uniform distribution
@@ -25,7 +25,7 @@ python3 python train_P.py
 
 Note that there should be a validation set of the corresponding size in ```./DataGen/durs and ./DataGen/ords```.
 
-### test
+### Test
 
 ```
 # For test dataset 1, reproduce result in paper “python3 python test_learned_on_benchmark_1.py” for test instances.
