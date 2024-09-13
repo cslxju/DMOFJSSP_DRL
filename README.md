@@ -1,6 +1,13 @@
 # DMOFJSSP-DRL
 Dynamic scheduling for multi-objective flexible job shop via deep reinforcement learning
 
+### Requirements
+Python = 3.7.0
+Pytorch = 1.6.0
+Torchvision = 0.7.0
+
+
+
 ### Installation 
 conda create -n dmofjssp-env python=3.7.0 
 conda install pytorch==1.6.0 torchvision==0.7.0 cudatoolkit=10.2 -c pytorch
