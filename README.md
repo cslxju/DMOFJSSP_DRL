@@ -9,12 +9,17 @@ conda install pytorch==1.6.0 torchvision==0.7.0 cudatoolkit=10.2 -c pytorch
 
 ```
 # The policy model trained under the uniform distribution
-1. training the policy model python3 python train_U.py
+1. training the policy model
+python3 python train_U.py
+
 2. putting the trained model "policy_job_mch.pth" into the path "./Saved_network/MODFJSSP_U_f_1_c_1.5"
 
 
 # The policy model trained under the poisson distribution
-1. training the policy model python3 python train_P.py
+1. training the policy model
+python3 python train_P.py
+
+
 2. putting the trained model "policy_job_mch.pth" into the path "./Saved_network/MODFJSSP_P_e_20_DDT_1.2"
 ```
 
@@ -24,6 +29,8 @@ Note that there should be a validation set of the corresponding size in ```./Dat
 
 ```
 # For test dataset 1, reproduce result in paper “python3 python test_learned_on_benchmark_1.py” for test instances.
+python3 python test_learned_on_benchmark_1.py
+
 1. note that the instance scales are 10*5, 20*5, 50*5, 20*10, 50*10, 100*10, 50*15, 100*15, and 200*15.
 2. taking the instance 10*5 as an example, select a policy model trained under uniform or poisson distribution(Ours_U or Ours_P).
 3. getting the F1, F2 and F3 values in paper
