@@ -39,7 +39,7 @@ python3 python test_learned_on_benchmark_1.py
 # For test dataset 2, reproduce result in paper
 python3 python test_learned_on_benchmark_2.py for test instances.
 1. note that the instance scales are 20*8, 20*12, 20*16, 30*8, 30*12, 30*16, 40*8, 40*12, and 40*16；Besides, lambda=50, 100, 200.
-2. taking the instance 50*20*8 as an example, select a policy model trained under uniform or poisson distribution(Ours_U or Ours_P).
+2. taking the instance 20*8 with lambda=50 as an example, select a policy model trained under uniform or poisson distribution(Ours_U or Ours_P).
 3. putting the result with the ".npz" format into the path "./results".
 4. getting the GD, IGD and Deta values in paper
 python3 python GD_IGD_Deta.py
