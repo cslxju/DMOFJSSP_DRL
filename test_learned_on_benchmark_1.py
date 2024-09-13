@@ -45,8 +45,8 @@ if __name__ == '__main__':
     c=1.5   #2, 1.5, 1.2
     seed_test=30
 
-    New_durs = np.load('./Configuration_Env1/instances_test1/f_{}_c_{}_data/New_data/New_durs{}_{}_f_{}_c_{}_Seed{}'.format(f, c, n_j, n_m, f, c, seed_test) + '.npy')
-    New_ords = np.load('./Configuration_Env1/instances_test1/f_{}_c_{}_data/New_data/New_ords{}_{}_f_{}_c_{}_Seed{}'.format(f, c, n_j, n_m, f, c, seed_test) + '.npy')
+    New_durs = np.load('./Configuration_Env1/instances_test1/f_{}_c_{}_data/New_durs{}_{}_f_{}_c_{}_Seed{}'.format(f, c, n_j, n_m, f, c, seed_test) + '.npy')
+    New_ords = np.load('./Configuration_Env1/instances_test1/f_{}_c_{}_data/New_ords{}_{}_f_{}_c_{}_Seed{}'.format(f, c, n_j, n_m, f, c, seed_test) + '.npy')
 
     ppo = PPO(configs.lr, configs.gamma, configs.k_epochs, configs.eps_clip,
                 n_j=n_j,
@@ -55,9 +55,9 @@ if __name__ == '__main__':
     filepath = 'Saved_network'
     ########################## Selecting the policy model trained under the uniform distribution or under the poisson distribution
 
-    # filepath = os.path.join(filepath, 'MODFJSSP_U_f_1_c_1.5')    # The policy model trained under the uniform distribution
+    filepath = os.path.join(filepath, 'MODFJSSP_U_f_1_c_1.5')    # The policy model trained under the uniform distribution
     # or 
-    filepath = os.path.join(filepath, 'MODFJSSP_P_e_20_DDT_1.2')    # The policy model trained under the poisson distribution
+    # filepath = os.path.join(filepath, 'MODFJSSP_P_e_20_DDT_1.2')    # The policy model trained under the poisson distribution
     filepaths = get_imlist(filepath)
     ppo.policy_job_mch.load_state_dict(torch.load(filepaths[0]))
 
