@@ -2,9 +2,9 @@
 Dynamic scheduling for multi-objective flexible job shop via deep reinforcement learning
 
 ### Requirements
-Python = 3.7.0
-Pytorch = 1.6.0
-Torchvision = 0.7.0
+- Python = 3.7.0
+- Pytorch = 1.6.0
+- Torchvision = 0.7.0
 
 
 
